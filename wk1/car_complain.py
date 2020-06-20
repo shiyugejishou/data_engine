@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 数据读取
-result = pd.read_csv('car_complain.csv', encoding='utf8')
+result = pd.read_csv('.\wk2\spider_result.csv', encoding='utf8')
 # 数据预处理
 # result = result.drop('problem', 1).join(result.problem.str.get_dummies(','))
 
