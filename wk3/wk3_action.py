@@ -34,6 +34,7 @@ plt.plot(x, sse, 'o-')
 # plt.savefig("K-Means.png")
 plt.show()
 plt.figure()
+
 # 轮廓系数法
 sc_scores = []
 for k in range(2, 11):
@@ -47,8 +48,8 @@ plt.ylabel('SCS')
 plt.plot(k, sc_scores, '*-')
 plt.show()
 
-# 使用K-Means聚类，由手肘法可知最佳k值为5
-k_means = KMeans(n_clusters=5)
+# 使用K-Means聚类，由手肘法和轮廓系数法可知最佳k值为3
+k_means = KMeans(n_clusters=3)
 k_means.fit(train_x)
 predict_y = k_means.predict(train_x)
 # 合并聚类结果，插入到原数据中
