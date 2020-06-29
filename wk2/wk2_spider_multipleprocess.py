@@ -24,7 +24,7 @@ class MyThread(threading.Thread):
         self.name = thread_name
 
     def run(self):
-        print('\n线程%s已开始……'% self.name)
+        print('线程%s已开始……'% self.name)
         # 判断队列是否为空
         while not self.queue.empty():
             url = self.queue.get()
